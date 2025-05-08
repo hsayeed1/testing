@@ -1,0 +1,3 @@
+john doe,39,DC
+hum say,20,middletown
+rina james,40,NY
