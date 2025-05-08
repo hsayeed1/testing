@@ -1,0 +1,26 @@
+name: Upload Flat File to BigQuery
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up gcloud CLI
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: testproject-459116
+
+      - name: Upload to BigQuery
+        run: |
+          bq load \
+            --autodetect \
+            --source_format=CSV \
+            flatfiletesting.customer \
+            ./flatfile.txt
