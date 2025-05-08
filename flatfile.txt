@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 john doe,39,DC
 hum say,20,middletown
+=======
+john doe,39,DC
+hum say,20,middletown
+>>>>>>> c92a5d1886859878005e6a06867e0acea8775ebb
 rina james,40,NY
